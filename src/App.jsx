@@ -103,10 +103,10 @@ export default function App() {
     };
 
     const SkillCard = ({ icon, title, level, delay }) => (
-        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 animate-child card-hover" style={{transitionDelay: `${delay * 50}ms`}}>
+        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 animate-child card-hover flex flex-col" style={{transitionDelay: `${delay * 50}ms`}}>
             <div className="card-icon text-4xl text-blue-600 mb-3 flex justify-center">{icon}</div>
-            <h3 className="text-lg font-semibold text-gray-800 text-center">{title}</h3>
-            {level && <p className="text-gray-500 text-center">{level}</p>}
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 text-center min-h-[3rem] sm:min-h-[3.5rem] flex-grow flex items-center justify-center">{title}</h3>
+            {level && <p className="text-gray-500 text-center mt-2">{level}</p>}
         </div>
     );
     
@@ -122,7 +122,7 @@ export default function App() {
         interests: [
             { icon: '🤖', title: 'Artificial Intelligence & Machine Learning' },
             { icon: '💻', title: 'Full-Stack Web Development' },
-            { icon: '☁️', title: 'Cloud Computing (AWS/Azure)' },
+            { icon: '☁️', title: 'Cloud Computing' },
             { icon: '🛡️', title: 'Cybersecurity' },
             { icon: '📊', title: 'Data Science & Analytics' },
             { icon: '📱', title: 'Mobile App Development' },
