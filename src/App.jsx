@@ -204,17 +204,17 @@ export default function App() {
                 </header>
 
                 <main>
-                    <section id="home" className={`relative pt-24 pb-32 bg-white overflow-hidden animate-section ${visibleSections.has('home') ? 'is-visible' : ''}`}>
+                    <section id="home" className={`relative pt-20 pb-24 md:pt-24 md:pb-32 bg-white overflow-hidden animate-section ${visibleSections.has('home') ? 'is-visible' : ''}`}>
                         <div className="container mx-auto px-6 text-center relative z-10">
-                            <div className="w-36 h-48 rounded-3xl mx-auto mb-6 shadow-lg animate-child overflow-hidden" style={{transitionDelay: '0ms'}}>
+                            <div className="w-32 h-40 md:w-36 md:h-48 rounded-3xl mx-auto mb-6 shadow-lg animate-child overflow-hidden" style={{transitionDelay: '0ms'}}>
                                 <img src="/image.jpeg" alt="Syed Nazeer S. Profile Picture" className="w-full h-full object-cover" />
                             </div>
-                            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight animate-child" style={{transitionDelay: '100ms'}}> Syed Nazeer S. </h1>
-                            <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto animate-child" style={{transitionDelay: '200ms'}}> A passionate Computer Science student and developer, crafting innovative solutions for complex problems. </p>
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight animate-child" style={{transitionDelay: '100ms'}}> Syed Nazeer S. </h1>
+                            <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto animate-child" style={{transitionDelay: '200ms'}}> A passionate Computer Science student and developer, crafting innovative solutions for complex problems. </p>
                             <div className="mt-8 flex justify-center items-center space-x-5 animate-child" style={{transitionDelay: '300ms'}}>
                                 <a href="https://www.linkedin.com/in/syed-nazeer-78ba93380/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-700 social-icon-hover" aria-label="View my LinkedIn profile"><LinkedinIcon /></a>
                                 <a href="https://github.com/SyedNazeer07" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 social-icon-hover" aria-label="View my GitHub profile"><GithubIcon /></a>
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nazeer0906s@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-red-500 social-icon-hover" aria-label="Send me an email"><MailIcon /></a>
+                                <a href="mailto:nazeer0906s@gmail.com" className="text-gray-500 hover:text-red-500 social-icon-hover" aria-label="Send me an email"><MailIcon /></a>
                             </div>
                             <div className="mt-10 animate-child" style={{transitionDelay: '400ms'}}>
                                 <a href="#projects" onClick={(e) => { e.preventDefault(); handleScrollTo('#projects'); }} className="bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 interactive-hover"> View My Work </a>
@@ -222,7 +222,7 @@ export default function App() {
                         </div>
                     </section>
 
-                    <section id="about" className={`py-20 overflow-hidden animate-section ${visibleSections.has('about') ? 'is-visible' : ''}`}>
+                    <section id="about" className={`py-16 md:py-20 overflow-hidden animate-section ${visibleSections.has('about') ? 'is-visible' : ''}`}>
                         <div className="container mx-auto px-6">
                             <h2 className="text-3xl font-bold text-center mb-12 animate-child" style={{transitionDelay: '0ms'}}>About Me</h2>
                             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -241,20 +241,20 @@ export default function App() {
                         </div>
                     </section>
 
-                    <section id="skills" className={`py-20 bg-white overflow-hidden animate-section ${visibleSections.has('skills') ? 'is-visible' : ''}`}>
+                    <section id="skills" className={`py-16 md:py-20 bg-white overflow-hidden animate-section ${visibleSections.has('skills') ? 'is-visible' : ''}`}>
                         <div className="container mx-auto px-6">
                             <h2 className="text-3xl font-bold text-center mb-12 animate-child" style={{transitionDelay: '0ms'}}>Technical Skills & Interests</h2>
-                             <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                                 {skillsData.technical.map((skill, index) => ( <SkillCard key={skill.title} icon={skill.icon} title={skill.title} level={skill.level} delay={index + 1} /> ))}
                             </div>
                             <p className="text-center mt-12 text-gray-500 animate-child" style={{transitionDelay: `${skillsData.technical.length * 50}ms`}}>I am also keenly interested in the following high-demand fields:</p>
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-8">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-8">
                                  {skillsData.interests.map((skill, index) => ( <SkillCard key={skill.title} icon={skill.icon} title={skill.title} delay={skillsData.technical.length + index + 2} /> ))}
                             </div>
                         </div>
                     </section>
                     
-                    <section id="projects" className={`py-20 overflow-hidden animate-section ${visibleSections.has('projects') ? 'is-visible' : ''}`}>
+                    <section id="projects" className={`py-16 md:py-20 overflow-hidden animate-section ${visibleSections.has('projects') ? 'is-visible' : ''}`}>
                         <div className="container mx-auto px-6">
                              <h2 className="text-3xl font-bold text-center mb-12 animate-child" style={{transitionDelay: '0ms'}}>Featured Project</h2>
                             <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 animate-child card-hover" style={{transitionDelay: '100ms'}}>
@@ -276,11 +276,11 @@ export default function App() {
                         </div>
                     </section>
 
-                    <section id="contact" className={`py-20 bg-white overflow-hidden animate-section ${visibleSections.has('contact') ? 'is-visible' : ''}`}>
+                    <section id="contact" className={`py-16 md:py-20 bg-white overflow-hidden animate-section ${visibleSections.has('contact') ? 'is-visible' : ''}`}>
                         <div className="container mx-auto px-6 text-center">
                             <h2 className="text-3xl font-bold mb-4 animate-child" style={{transitionDelay: '0ms'}}>Get In Touch</h2>
                             <p className="text-gray-600 max-w-lg mx-auto mb-8 animate-child" style={{transitionDelay: '100ms'}}>I'm actively looking for internship opportunities and am always open to discussing new projects, creative ideas, or ways to contribute to an amazing team. Feel free to reach out!</p>
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nazeer0906s@gmail.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 interactive-hover animate-child" style={{transitionDelay: '200ms'}}> <MailIcon className="mr-3" /> Say Hello </a>
+                            <a href="mailto:nazeer0906s@gmail.com" className="inline-flex items-center bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 interactive-hover animate-child" style={{transitionDelay: '200ms'}}> <MailIcon className="mr-3" /> Say Hello </a>
                             <div className="mt-10 flex justify-center items-center space-x-6 animate-child" style={{transitionDelay: '300ms'}}>
                                 <a href="https://www.linkedin.com/in/syed-nazeer-78ba93380/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-700 social-icon-hover" aria-label="View my LinkedIn profile"><LinkedinIcon /></a>
                                 <a href="https://github.com/SyedNazeer07" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 social-icon-hover" aria-label="View my GitHub profile"><GithubIcon /></a>
