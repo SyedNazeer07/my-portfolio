@@ -105,8 +105,8 @@ export default function App() {
     const SkillCard = ({ icon, title, level, delay }) => (
         <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 animate-child card-hover flex flex-col" style={{transitionDelay: `${delay * 50}ms`}}>
             <div className="card-icon text-4xl text-blue-600 mb-3 flex justify-center">{icon}</div>
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 text-center min-h-[3rem] sm:min-h-[3.5rem] flex-grow flex items-center justify-center">{title}</h3>
-            {level && <p className="text-gray-500 text-center mt-2">{level}</p>}
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 text-center flex-grow flex items-center justify-center">{title}</h3>
+            {level && <p className="text-gray-500 text-center mt-2 text-sm sm:text-base">{level}</p>}
         </div>
     );
     
@@ -244,11 +244,11 @@ export default function App() {
                     <section id="skills" className={`py-16 md:py-20 bg-white overflow-hidden animate-section ${visibleSections.has('skills') ? 'is-visible' : ''}`}>
                         <div className="container mx-auto px-6">
                             <h2 className="text-3xl font-bold text-center mb-12 animate-child" style={{transitionDelay: '0ms'}}>Technical Skills & Interests</h2>
-                             <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
                                 {skillsData.technical.map((skill, index) => ( <SkillCard key={skill.title} icon={skill.icon} title={skill.title} level={skill.level} delay={index + 1} /> ))}
                             </div>
                             <p className="text-center mt-12 text-gray-500 animate-child" style={{transitionDelay: `${skillsData.technical.length * 50}ms`}}>I am also keenly interested in the following high-demand fields:</p>
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-8">
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto mt-8">
                                  {skillsData.interests.map((skill, index) => ( <SkillCard key={skill.title} icon={skill.icon} title={skill.title} delay={skillsData.technical.length + index + 2} /> ))}
                             </div>
                         </div>
