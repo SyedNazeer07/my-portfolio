@@ -214,7 +214,7 @@ export default function App() {
                             <div className="mt-8 flex justify-center items-center space-x-5 animate-child" style={{transitionDelay: '300ms'}}>
                                 <a href="https://www.linkedin.com/in/syed-nazeer-78ba93380/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-700 social-icon-hover" aria-label="View my LinkedIn profile"><LinkedinIcon /></a>
                                 <a href="https://github.com/SyedNazeer07" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 social-icon-hover" aria-label="View my GitHub profile"><GithubIcon /></a>
-                                <a href="mailto:nazeer0906s@gmail.com" className="text-gray-500 hover:text-red-500 social-icon-hover" aria-label="Send me an email"><MailIcon /></a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nazeer0906s@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-red-500 social-icon-hover" aria-label="Send me an email"><MailIcon /></a>
                             </div>
                             <div className="mt-10 animate-child" style={{transitionDelay: '400ms'}}>
                                 <a href="#projects" onClick={(e) => { e.preventDefault(); handleScrollTo('#projects'); }} className="bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 interactive-hover"> View My Work </a>
@@ -280,7 +280,7 @@ export default function App() {
                         <div className="container mx-auto px-6 text-center">
                             <h2 className="text-3xl font-bold mb-4 animate-child" style={{transitionDelay: '0ms'}}>Get In Touch</h2>
                             <p className="text-gray-600 max-w-lg mx-auto mb-8 animate-child" style={{transitionDelay: '100ms'}}>I'm actively looking for internship opportunities and am always open to discussing new projects, creative ideas, or ways to contribute to an amazing team. Feel free to reach out!</p>
-                            <a href="mailto:nazeer0906s@gmail.com" className="inline-flex items-center bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 interactive-hover animate-child" style={{transitionDelay: '200ms'}}> <MailIcon className="mr-3" /> Say Hello </a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nazeer0906s@gmail.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 interactive-hover animate-child" style={{transitionDelay: '200ms'}}> <MailIcon className="mr-3" /> Say Hello </a>
                             <div className="mt-10 flex justify-center items-center space-x-6 animate-child" style={{transitionDelay: '300ms'}}>
                                 <a href="https://www.linkedin.com/in/syed-nazeer-78ba93380/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-700 social-icon-hover" aria-label="View my LinkedIn profile"><LinkedinIcon /></a>
                                 <a href="https://github.com/SyedNazeer07" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 social-icon-hover" aria-label="View my GitHub profile"><GithubIcon /></a>
